@@ -50,5 +50,11 @@ public class CustomLinkedListTest {
         int result = testList.get(0);
         Assert.assertEquals(2, result);
     }
+    @Test(expected = IllegalArgumentException.class)
+    public void GetElementShouldTrowExceptionWhenIndexOverTheList(){
+            testList.add(1);
+            testList.get(1);
+
+    }
 
 }
