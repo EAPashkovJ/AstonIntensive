@@ -1,3 +1,4 @@
+package CollectionsTest;
 
 import Collections.CustomLinkedList;
 import org.junit.jupiter.api.Assertions;
