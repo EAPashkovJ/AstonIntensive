@@ -17,13 +17,11 @@ public class CustomLinkedListTest {
         testList = new CustomLinkedList<>();
     }
 
-
     @Test
     public void elementShouldBeAddInCollection() {
         testList.add(1);
         int result = testList.get(0);
         Assertions.assertEquals(1, result);
-
     }
 
     @Test
@@ -54,21 +52,12 @@ public class CustomLinkedListTest {
         int result = testList.get(0);
         Assertions.assertEquals(2, result);
     }
-//    @Test( = IllegalArgumentException.class)
-//    public void GetElementShouldTrowExceptionWhenIndexOverTheList(){
-//            testList.add(1);
-//            testList.get(1);
 
         @Test
         public void GetElementShouldTrowExceptionWhenIndexOverTheList() {
             Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-                Integer.parseInt("1a");
+                Integer.parseInt("Trowed exception");
             });
-
-            String expectedMessage = "For input string";
-            String actualMessage = exception.getMessage();
-
-            assertTrue(actualMessage.contains(expectedMessage));
         }
     }
 
