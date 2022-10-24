@@ -9,7 +9,6 @@ import java.util.Comparator;
 public class BubbleSortTest {
     private CustomLinkedList<String> testList;
     private CustomLinkedList<String> expectList;
-
     @BeforeEach
     public void createNewCustomLinkedList() {
         testList = new CustomLinkedList<>();

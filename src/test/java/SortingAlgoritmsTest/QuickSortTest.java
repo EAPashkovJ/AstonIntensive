@@ -4,7 +4,6 @@ import Collections.CustomLinkedList;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 public class QuickSortTest {
     private CustomLinkedList<Integer> testList;
     private CustomLinkedList<Integer> expectList;
