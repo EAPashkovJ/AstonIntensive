@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
-
 public class BubbleSortTest {
     private CustomLinkedList<String> testList;
     private CustomLinkedList<String> expectList;
