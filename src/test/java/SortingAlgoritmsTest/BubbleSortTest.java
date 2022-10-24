@@ -14,7 +14,6 @@ public class BubbleSortTest {
         testList = new CustomLinkedList<>();
         expectList = new CustomLinkedList<>();
     }
-
     @Test
     public void BubbleSortShouldReturnSortedCollectionByComparator() {
         // fill the tested List

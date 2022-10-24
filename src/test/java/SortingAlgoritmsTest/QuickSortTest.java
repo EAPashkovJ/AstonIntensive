@@ -13,7 +13,6 @@ public class QuickSortTest {
         testList = new CustomLinkedList<>();
         expectList = new CustomLinkedList<>();
     }
-
     @Test
     public void QuickSortShouldReturnSortedCollection() {
         // fill the tested List
