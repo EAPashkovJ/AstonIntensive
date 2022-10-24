@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class CustomLinkedListTest {
@@ -53,11 +52,10 @@ public class CustomLinkedListTest {
         Assertions.assertEquals(2, result);
     }
 
-        @Test
-        public void GetElementShouldTrowExceptionWhenIndexOverTheList() {
-            Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-                Integer.parseInt("Trowed exception");
-            });
-        }
+    @Test
+    public void GetElementShouldTrowExceptionWhenIndexOverTheList() {
+        assertThrows(IllegalArgumentException.class, () -> testList.get(10)
+        );
     }
+}
 
