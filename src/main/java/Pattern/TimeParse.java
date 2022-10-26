@@ -1,48 +1,8 @@
 package Pattern;
 
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-
-import java.io.IOException;
-import java.net.URL;
-
-/**
- * Class for get actual Time
- */
-public class TimeParse {
-
-    private static Document getPage() {
-        String url = "https://time100.ru/Moscow";
+public interface TimeParse {
 
 
-        try {
-            return Jsoup.parse(new URL(url), 3000);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static void parseElement() {
-        Document page = getPage();
-
-        Element tableTime = page.select("header").first();
-
-        assert tableTime != null;
-        Element valueTime = tableTime.select("span.time").first();
-        Element valueDate = tableTime.select("span.time").last();
-
-        assert valueTime != null;
-        for (Element e : valueTime.select("span.time")) {
-            System.out.println(e.text());
-        }
-        assert valueDate != null;
-        for (Element e : valueDate.select("span.time")) {
-            System.out.println(e.text().toUpperCase());
-        }
-
-    }
-
-
+    void parseElement();
 }
