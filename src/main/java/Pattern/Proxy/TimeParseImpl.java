@@ -35,6 +35,7 @@ public class TimeParseImpl implements TimeParse {
      * field Time and Date
      * @return Strings current time and current date
      */
+
     @Override
     public String parseElement() {
 

@@ -5,7 +5,6 @@ import java.io.*;
 
 public class InstructionImplRus implements Instruction {
 
-
     @Override
     public void getInstruction() {
 
