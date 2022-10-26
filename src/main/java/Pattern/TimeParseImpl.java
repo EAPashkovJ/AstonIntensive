@@ -46,7 +46,7 @@ public class TimeParseImpl implements TimeParse {
 
         assert valueTime != null;
         for (Element e : valueTime.select("span.time")) {
-            System.out.println(e.text());
+            System.out.print(e.text() + " ");
         }
         assert valueDate != null;
         for (Element e : valueDate.select("span.time")) {
