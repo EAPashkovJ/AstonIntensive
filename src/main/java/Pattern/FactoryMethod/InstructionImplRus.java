@@ -14,7 +14,7 @@ public class InstructionImplRus implements Instruction {
         try {
             reader = new FileReader(
 
-                    "/Users/evgeniipashkov/Downloads/IdeaProjects/AstonIntensive/Instructions/instruction_rus.txt");
+                    "Instructions/instruction_rus.txt");
 
             BufferedReader buffReader =
                     new BufferedReader(reader);

@@ -12,7 +12,7 @@ public class InstructionEngImpl implements Instruction{
         try {
             reader = new FileReader(
 
-                    "/Users/evgeniipashkov/Downloads/IdeaProjects/AstonIntensive/Instructions/instruction_eng.txt");
+                    "Instructions/instruction_eng.txt");
 
             BufferedReader buffReader =
                     new BufferedReader(reader);

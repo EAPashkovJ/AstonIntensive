@@ -33,26 +33,37 @@ public class TimeParseImpl implements TimeParse {
     /**
      * Get read page and parsed
      * field Time and Date
+     * @return Strings current time and current date
      */
     @Override
-    public void parseElement() {
+    public String parseElement() {
+
         Document page = getPage();
 
         Element tableTime = page.select("header").first();
 
-        assert tableTime != null;
-        Element valueTime = tableTime.select("span.time").first();
-        Element valueDate = tableTime.select("span.time").last();
+        String currentTime = null;
+        String currentDate = null;
+        if (tableTime != null) {
+            Element valueTime = tableTime.select("span.time").first();
+            Element valueDate = tableTime.select("span.time").last();
 
-        assert valueTime != null;
-        for (Element e : valueTime.select("span.time")) {
-            System.out.print(e.text() + " ");
-        }
-        assert valueDate != null;
-        for (Element e : valueDate.select("span.time")) {
-            System.out.println(e.text().toUpperCase());
+            //assert valueTime != null;
 
+            if (valueTime != null) {
+                for (Element e : valueTime.select("span.time")) {
+                    //System.out.print(e.text() + " ");
+                    currentTime = e.text();
+                }
+            }
+            if (valueDate != null) {
+                for (Element e : valueDate.select("span.time")) {
+                    // System.out.println(e.text().toUpperCase());
+                    currentDate = e.text().toUpperCase();
+                }
+            }
         }
+        return currentTime + " " +  currentDate;
     }
 
 }

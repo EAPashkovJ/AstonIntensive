@@ -13,17 +13,21 @@ public class Main {
 
         // return current date and time
         TimeParse timeParse = new ProxyTimeParse();
-        timeParse.parseElement();
+        String str = timeParse.parseElement();
+        System.out.println(str);
+
+         //Try for change Locale
+        //Locale.setDefault(new Locale("eng", "GB"));
 
         // return actual instruction depending system language
-        switch (Locale.getDefault().getLanguage()){
+        switch (Locale.getDefault().getLanguage()) {
 
-            case "ru" : {
+            case "ru": {
                 InstructionFactory instructionFactory = new InstructionRusFactory();
                 instructionFactory.createInstruction().getInstruction();
                 break;
             }
-            case "eng" : {
+            case "eng": {
                 InstructionFactory instructionFactory = new InstructionEngFactory();
                 instructionFactory.createInstruction().getInstruction();
                 break;
