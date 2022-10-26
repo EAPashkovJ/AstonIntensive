@@ -1,4 +1,4 @@
-package Pattern;
+package Pattern.Proxy;
 
 
 import org.jsoup.Jsoup;

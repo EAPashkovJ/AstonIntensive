@@ -1,4 +1,4 @@
-package Pattern;
+package Pattern.Proxy;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +10,9 @@ public class ProxyTimeParse implements TimeParse{
     TimeParseImpl timeParse = new TimeParseImpl();
 
 
+    /*
+    Add new functional Logger
+     */
     @Override
     public void parseElement() {
         try {
