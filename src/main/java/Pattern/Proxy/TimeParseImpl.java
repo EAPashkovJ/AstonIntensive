@@ -21,7 +21,6 @@ public class TimeParseImpl implements TimeParse {
     private Document getPage() {
         String url = "https://time100.ru/Moscow";
 
-
         try {
             return Jsoup.parse(new URL(url), 3000);
         } catch (IOException e) {
@@ -29,10 +28,10 @@ public class TimeParseImpl implements TimeParse {
         }
     }
 
-
     /**
      * Get read page and parsed
      * field Time and Date
+     *
      * @return Strings current time and current date
      */
 
@@ -49,22 +48,18 @@ public class TimeParseImpl implements TimeParse {
             Element valueTime = tableTime.select("span.time").first();
             Element valueDate = tableTime.select("span.time").last();
 
-            //assert valueTime != null;
-
             if (valueTime != null) {
                 for (Element e : valueTime.select("span.time")) {
-                    //System.out.print(e.text() + " ");
                     currentTime = e.text();
                 }
             }
             if (valueDate != null) {
                 for (Element e : valueDate.select("span.time")) {
-                    // System.out.println(e.text().toUpperCase());
                     currentDate = e.text().toUpperCase();
                 }
             }
         }
-        return currentTime + " " +  currentDate;
+        return currentTime + " " + currentDate;
     }
 
 }

@@ -1,4 +1,4 @@
-package PatternTest;
+package PatternTest.ProxyTest;
 
 
 import Pattern.Proxy.ProxyTimeParse;
@@ -23,6 +23,12 @@ public class TimeParseImplTest {
       TimeParse resultOrdinary = new TimeParseImpl();
       Assertions.assertNotEquals(resultOrdinary, resultProxy);
 
+    }
+    @Test
+    public void returnResultMatchedRegexAndInputData(){
+        String resultRes = timeParse.parseElement();
+        boolean res = resultRes.matches("^(?!.*0-9.*$)(.*)$");
+        Assertions.assertTrue(res, resultRes);
     }
 
 

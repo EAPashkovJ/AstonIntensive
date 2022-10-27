@@ -1,7 +1,7 @@
 
-import Pattern.FactoryMethod.InstructionEngFactory;
+import Pattern.FactoryMethod.Instruction;
+import Pattern.FactoryMethod.InstructionDistributor;
 import Pattern.FactoryMethod.InstructionFactory;
-import Pattern.FactoryMethod.InstructionRusFactory;
 import Pattern.Proxy.ProxyTimeParse;
 import Pattern.Proxy.TimeParse;
 
@@ -17,23 +17,12 @@ public class Main {
         String str = timeParse.parseElement();
         System.out.println(str);
 
-         //Try for change Locale
+        //Try for change Locale
         //Locale.setDefault(new Locale("eng", "GB"));
 
-        // return actual instruction depending system language
-        switch (Locale.getDefault().getLanguage()) {
+        InstructionDistributor inst = new InstructionDistributor();
+        System.out.println(inst.getNecessaryInstruction());
 
-            case "ru": {
-                InstructionFactory instructionFactory = new InstructionRusFactory();
-                instructionFactory.createInstruction().getInstruction();
-                break;
-            }
-            case "eng": {
-                InstructionFactory instructionFactory = new InstructionEngFactory();
-                instructionFactory.createInstruction().getInstruction();
-                break;
-            }
-        }
+
     }
-
 }

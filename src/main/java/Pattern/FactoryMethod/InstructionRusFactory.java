@@ -1,9 +1,8 @@
 package Pattern.FactoryMethod;
 
-public class InstructionRusFactory implements InstructionFactory{
-
+public class InstructionRusFactory implements InstructionFactory {
     @Override
     public Instruction createInstruction() {
-        return new InstructionImplRus();
+        return new InstructionRusImpl();
     }
 }
